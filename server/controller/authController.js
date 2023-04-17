@@ -13,7 +13,23 @@ const register = async (req, res) => {
 };
 
 const login = async (req, res) => {
-  res.send("login");
+const {email,password} = req.body
+if(!email || !password) {
+  res.status(500).json({msg:'Please Try Again'})
+}
+if(!user){
+  res.status(500).json({msg:'Invalid credentials'})
+
+const isCorrect = await user.comparePassword(password)
+
+if(!isCorrect) {
+  res.status(500).json({msg:'Invalid credentials'})
+}
+
+const token = user.createJWT()
+user.password = undefined
+restart.status(201).json({user,token})
+}
 };
 
 export { register, login };

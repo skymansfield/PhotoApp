@@ -8,6 +8,11 @@ import connectDB from "./db/connect.js";
 
 import authRoute from "./routes/authRoute.js";
 
+import morgan from 'morgan';
+if(process.env.NODE_ENV !== 'production') {
+  app.use(morgan('dev'))
+}
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
