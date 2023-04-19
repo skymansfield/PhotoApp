@@ -4,6 +4,7 @@ const Register = () => {
     return (
         <div>
             Register
+            {/* note */}
         </div>
     );
 }
