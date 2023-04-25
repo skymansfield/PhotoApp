@@ -1,0 +1,14 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 2px;
+ 
+    text-transform: uppercase;
+
+
+}
+.label {
+
+}
