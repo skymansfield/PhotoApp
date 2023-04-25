@@ -1,0 +1,14 @@
+.formcan {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 40%;
+    align-items: center;
+    text-align: center;
+    padding: 2px;
+    background-color: gray;
+    margin:13% 35%;
+}
+.register {
+    margin-left: 5px;
+}
