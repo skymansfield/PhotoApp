@@ -54,6 +54,7 @@ navigate('/')
 },[user,navigate])
 
   return (
+    <div className="bgimg">
     <div className="formcan">
       <form onSubmit={handleSubmit}>
         <h1>{values.isMember ? "Login" : "Register"}</h1>
@@ -83,7 +84,7 @@ navigate('/')
       </p>
       </form>
     </div>
-    // here we go again
+    </div>
   );
 };
 

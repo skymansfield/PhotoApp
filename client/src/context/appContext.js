@@ -1,4 +1,4 @@
-import React, { useState, useReducer, useContext } from "react";
+import React, { useReducer, useContext } from "react";
 import reducer from "./reducers";
 import {
   REGISTER_USER_BEGIN,
@@ -28,10 +28,10 @@ const AppProvider = ({ children }) => {
     localStorage.setItem("token", token);
   };
 
-  const removeUser = () => {
-    localStorage.removeItem("user");
-    localStorage.removeItem("token");
-  };
+  // const removeUser = () => {
+  //   localStorage.removeItem("user");
+  //   localStorage.removeItem("token");
+  // };
 
   const registerUser = async (currentUser) => {
     dispatch({ type: REGISTER_USER_BEGIN });
