@@ -1,6 +1,5 @@
-import React from "react";
+const Image = ({ data }) => {
 
-const Image = () => {
   return (
     <a href={data.urls.regular} target="_blank" rel="noreferrer">
       <img
