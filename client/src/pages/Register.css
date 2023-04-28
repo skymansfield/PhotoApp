@@ -2,11 +2,10 @@
     background-image: url('../assets/pics1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 680px;
-    margin: -15%;
-    padding-top: 15%;
+
+
 }
-.formcan {
+/* .formcan {
     display: flex;
     justify-content: center;
     width: 25%;
@@ -19,4 +18,4 @@
 }
 .register {
     margin-left: 5px;
-}
+} */

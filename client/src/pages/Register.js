@@ -54,31 +54,31 @@ navigate('/')
 },[user,navigate])
 
   return (
-    <div className="bgimg">
-    <div className="formcan">
-      <form onSubmit={handleSubmit}>
-        <h1>{values.isMember ? "Login" : "Register"}</h1>
+    <div className="bgimg flex items-center justify-center h-screen">
+    <div className="w-full max-w-md bg-gray-400 rounded-lg shadow-md p-8">
+      <form className="" onSubmit={handleSubmit}>
+        <h1 className="text-center text-3xl font-bold mb-8">{values.isMember ? "Login" : "Register"}</h1>
         <FormInput
           type="email"
           value={values.email}
           name="email"
           handleChange={handleChange}
         />
-        <br/>
+       
         <FormInput
           type="password"
           value={values.password}
           name="password"
           handleChange={handleChange}
         />
-        <br/>
-        <button type="submit">Submit</button>
-  
+       <div className="text-center">
+        <button className='bg-blue-700 hover:bg-blue-500 text-white font-bold my-2 py-2 px-4 rounded focus:outline-none focus:shadow-outline'type="submit">Submit</button>
+        </div>
       <br/>
-      <p>
+      <p className="text-center">
 
-        {!values.isMember ? "Already a member?" : "Not a member?"}
-        <button className="register" type="button" onClick={toggleMember}>
+        {!values.isMember ? "Already a member?   " : "Not a member?   "}
+        <button className="underline font-bold"  onClick={toggleMember}>
           {!values.isMember ? "Login" : "Register"}
         </button>
       </p>
