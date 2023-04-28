@@ -1,18 +1,17 @@
-import React from 'react';
-import Jumbutron from '../components/Jumbutron';
-import SearchField from '../components/SearchField';
-import Images from '../components/Images';
+import React from "react";
+import Jumbutron from "../components/Jumbutron";
+import SearchField from "../components/SearchField";
+import Images from "../components/Images";
 
 const Dashboard = () => {
-    return (
+  return (
     <>
-       <Jumbutron>
-        <SearchField/>
-       </Jumbutron>
-        <Images />
-        </>
-   
-    );
-}
+      <Jumbutron>
+        <SearchField />
+      </Jumbutron>
+      <Images />
+    </>
+  );
+};
 
 export default Dashboard;

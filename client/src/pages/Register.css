@@ -1,21 +1,3 @@
-.bgimg {
-    background-image: url('../assets/pics1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-
-
+.img {
+  background-image: url("../assets/pics1.jpg");
 }
-/* .formcan {
-    display: flex;
-    justify-content: center;
-    width: 25%;
-    height: 40%;
-    align-items: center;
-    text-align: center;
-    padding: 2px;
-    background-color: gray;
-    margin:13% 39%;
-}
-.register {
-    margin-left: 5px;
-} */

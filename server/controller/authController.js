@@ -5,7 +5,7 @@ const register = async (req, res) => {
     const { email, password } = req.body;
     const user = await User.create({ email, password });
     const token = user.createJWT();
-console.log(req, req);
+    console.log(req, req);
     res
       .status(201)
       .json({ user: { email: user.email, password: user.password }, token });
