@@ -1,22 +1,25 @@
-import React from 'react';
-import pic from '../assets/pics1.jpg'
+import React, { useContext } from "react";
+import { ImageContext } from "../pages/Dashboard.js";
+import Image from "./Image";
+import Skeleton from "./Skeleton";
 
 const Images = () => {
-    return (
-        <>
-        <h1 className='text-center mt-6 underline text-4xl uppercase tracking-wide font-medium'>Whats being searched</h1>
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-10 max-w-7xl mx-auto px-4'>
-        <img src={pic} alt="test img"></img>
-        <img src={pic} alt="test img"></img>
-        <img src={pic} alt="test img"></img>
-        <img src={pic} alt="test img"></img>
-        <img src={pic} alt="test img"></img>
-        <img src={pic} alt="test img"></img>
-        <img src={pic} alt="test img"></img>
-        <img src={pic} alt="test img"></img>
-            </div>
-        </>
-    );
-}
+  const { response, isLoading, searchImage } = useContext(ImageContext);
+
+  return (
+    <>
+      <h1 className="text-center mt-6 underline text-4xl uppercase tracking-wide font-medium">
+        {searchImage}
+      </h1>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-10 max-w-7xl mx-auto px-4">
+        {isLoading ? (
+          <Skeleton item={12} />
+        ) : (
+          response.map((data, key) => <Image key={key} data={data} />)
+        )}
+      </div>
+    </>
+  );
+};
 
 export default Images;
