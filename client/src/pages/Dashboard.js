@@ -23,7 +23,7 @@ const Dashboard = () => {
 
   return (
     <ImageContext.Provider value={value}>
-      <Jumbutron>
+       <Jumbutron>
         <SearchField />
       </Jumbutron>
       <Images />
